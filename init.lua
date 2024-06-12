@@ -1,0 +1,7 @@
+require('plugins') 
+require('cmp-conf')
+require('lsp')
+require('org-conf')
+require('bufferline-conf')
+require('colorscheme')
+require('preferences')
