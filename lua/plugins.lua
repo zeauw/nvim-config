@@ -91,7 +91,7 @@ require("lazy").setup({
 
     	-- Only one of these is needed, not both.
     	"nvim-telescope/telescope.nvim", -- optional
-    	"ibhagwan/fzf-lua",              -- optional
+    	-- "ibhagwan/fzf-lua",              -- optional
   	},
   	config = true},
 	-- {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
