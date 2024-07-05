@@ -38,6 +38,10 @@ vim.keymap.set('t', '<esc>', '<C-\\><C-n>', opts)
 -- set --
 -- ------
 vim.opt.number = true
+vim.opt.listchars = "tab:┊ ,space:·"
+vim.opt.list = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 
 --------------------------------
 -- disable copilot by default --
