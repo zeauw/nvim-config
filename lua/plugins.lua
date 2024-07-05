@@ -18,8 +18,7 @@ require("lazy").setup({
 
 	{"ahmedkhalf/project.nvim",
 	config = function()
-		require("project_nvim").setup {
-		}
+		require("project_nvim").setup {}
 	end
 	},
 
@@ -40,7 +39,8 @@ require("lazy").setup({
   	},
   	config = function()
 	require("nvim-tree").setup {}
-	end,},
+	end
+	},
 
 	{'akinsho/bufferline.nvim',
 	version = "*",
@@ -67,19 +67,6 @@ require("lazy").setup({
 	{'nvim-orgmode/orgmode',
   	event = 'VeryLazy',
   	ft = { 'org' },
-    	-- Setup orgmode
-	-- 将下面四行被注释的内容加入org-conf.lua（需自行创建）
-	-- require('orgmode').setup({
-      	-- org_agenda_files = {'~/Documents/org/*','~/Documents/org/**/*'},
-      	-- org_default_notes_file = '~/Documents/org/refile.org',
-    	-- })
-	
-    	-- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
-    	-- add ~org~ to ignore_install
-    	-- require('nvim-treesitter.configs').setup({
-    	--   ensure_installed = 'all',
-    	--   ignore_install = { 'org' },
-    	-- })
   	},
 
 	"dhruvasagar/vim-table-mode",
@@ -94,7 +81,21 @@ require("lazy").setup({
     	-- "ibhagwan/fzf-lua",              -- optional
   	},
   	config = true},
-	-- {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+	
+	{"nvim-treesitter/nvim-treesitter",
+	build = ":TSUpdate",
+	config = function () 
+	local configs = require("nvim-treesitter.configs")
+	configs.setup({
+		ensure_installed = 'all',
+		ignore_install = { 'org' },
+        })
+	end},
+
+	{"iamcco/markdown-preview.nvim",
+	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+	ft = { "markdown" },
+	build = function() vim.fn["mkdp#util#install"]() end,},
 })
 
 require('lualine').setup()
