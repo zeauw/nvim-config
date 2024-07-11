@@ -29,6 +29,9 @@ vim.keymap.set('n', '<A-g>', ':Neogit <CR>', opts)
 vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<Leader>fp', ':Telescope projects<CR>')
 
+-- terminal
+vim.keymap.set('n', '<A-z>', ':vsp term://zsh<CR>')
+
 -------------------
 -- Terminal mode --
 -------------------
