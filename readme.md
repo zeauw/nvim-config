@@ -10,7 +10,7 @@
 
 ## lsp
 
-按模板（```lua/lsp-template.lua```）创建自己的```lua/lsp.lua```。可通过[这个链接](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers)查看支持的lsp，通过[这个链接](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)查看某个lsp服务需要在系统上安装什么前置。
+根据自己的需求修改```lua/lsp.lua```。可通过[这个链接](https://github.com/williamboman/mason-lspconfig.nvim?tab=readme-ov-file#available-lsp-servers)查看支持的lsp，通过[这个链接](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md)查看某个lsp服务需要在系统上安装什么前置。
 
 ## copilot
 
@@ -18,7 +18,7 @@
 
 ## orgmode
 
-需按照```lua/plugins.lua```中注释说明配置全局日程文件路径，即新建```lua/org-conf.lua```，写入
+在```lua/org-conf.lua```按自己的需求配置相关文件路径，写入
 ```lua
 require('orgmode').setup({
   org_agenda_files = {'~/Documents/org/*','~/Documents/org/**/*'}, -- 替换为你的日程文件所在目录
