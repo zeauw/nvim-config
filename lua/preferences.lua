@@ -31,6 +31,7 @@ vim.keymap.set('n', '<Leader>fp', ':Telescope projects<CR>')
 
 -- terminal
 vim.keymap.set('n', '<A-z>', ':vsp term://zsh<CR>')
+vim.keymap.set('n', '<C-z>', ':split term://zsh<CR>')
 
 -------------------
 -- Terminal mode --
