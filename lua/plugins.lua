@@ -99,6 +99,8 @@ require("lazy").setup({
 	build = function() vim.fn["mkdp#util#install"]() end,},
 
 	{"wakatime/vim-wakatime", lazy = false},
+
+	{'Vigemus/iron.nvim'},
 })
 
 require('lualine').setup()
