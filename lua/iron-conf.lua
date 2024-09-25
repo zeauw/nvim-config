@@ -13,7 +13,7 @@ iron.setup {
         command = {"zsh"}
       },
       python = {
-        command = { "ipython" },  -- or { "ipython", "--no-autoindent" }
+        command = { "ipython", "--no-autoindent" },
         format = require("iron.fts.common").bracketed_paste_python
       }
     },
