@@ -13,7 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-	"lewis6991/gitsigns.nvim",
+	{"lewis6991/gitsigns.nvim",
+	config=function()
+		require('lualine').setup()
+	end},
 	"neovim/nvim-lspconfig",
 
 	{"ahmedkhalf/project.nvim",
@@ -47,7 +50,10 @@ require("lazy").setup({
 	dependencies = 'nvim-tree/nvim-web-devicons'},
 
 	{'nvim-lualine/lualine.nvim',
-    	dependencies = { 'nvim-tree/nvim-web-devicons' }},
+	dependencies = { 'nvim-tree/nvim-web-devicons' },
+	config=function()
+		require('lualine').setup()
+	end},
 
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
@@ -101,7 +107,12 @@ require("lazy").setup({
 	{"wakatime/vim-wakatime", lazy = false},
 
 	{'Vigemus/iron.nvim'},
-})
 
-require('lualine').setup()
-require('gitsigns').setup()
+	{'numToStr/Comment.nvim',
+	config=function()
+		require('Comment').setup()
+	end
+	},
+
+
+})
