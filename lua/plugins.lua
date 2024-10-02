@@ -114,5 +114,32 @@ require("lazy").setup({
 	end
 	},
 
+	{
+	"amitds1997/remote-nvim.nvim",
+	version = "*", -- Pin to GitHub releases
+	dependencies = {
+		"nvim-lua/plenary.nvim", -- For standard functions
+		"MunifTanjim/nui.nvim", -- To build the plugin UI
+		"nvim-telescope/telescope.nvim", -- For picking b/w different remote methods
+		},
+	config = true,
+	},
 
+	{
+	"CopilotC-Nvim/CopilotChat.nvim",
+	branch = "canary",
+	dependencies = {
+		{ "github/copilot.vim" }, -- or github/copilot.vim
+		{ "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+	},
+	build = "make tiktoken", -- Only on MacOS or Linux
+	opts = {
+	debug = true, -- Enable debugging
+	-- See Configuration section for rest
+	window = {
+		layout = 'vertical',
+	}
+	},
+	-- See Commands section for default commands if you want to lazy load on them
+	},
 })
