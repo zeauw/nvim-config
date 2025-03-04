@@ -2,7 +2,7 @@
 -- Normal mode --
 -----------------
 -- Nvim tree
-vim.keymap.set('n', '<A-f>', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<A-o>', ':NvimTreeToggle<CR>', opts)
 
 -- copilot
 vim.keymap.set('n', '<A-c>', ':CopilotChat<CR>', opts)
@@ -15,8 +15,8 @@ vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<Leader>fp', ':Telescope projects<CR>')
 
 -- terminal
-vim.keymap.set('n', '<A-t>', ':vsp term://zsh<CR>')
-vim.keymap.set('n', '<C-z>', ':split term://zsh<CR>')
+vim.keymap.set('n', '<A-t>', ':vsp term://fish<CR>')
+vim.keymap.set('n', '<C-z>', ':split term://fish<CR>')
 
 -- error
 vim.keymap.set('n', '<A-e>', '<cmd>lua vim.diagnostic.open_float()<CR>', opts) -- expand error information 
