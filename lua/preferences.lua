@@ -2,7 +2,7 @@
 -- Normal mode --
 -----------------
 -- Nvim tree
-vim.keymap.set('n', '<A-o>', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<A-l>', ':NvimTreeToggle<CR>', opts)
 
 -- copilot
 vim.keymap.set('n', '<A-c>', ':CopilotChat<CR>', opts)
@@ -42,7 +42,7 @@ vim.opt.shiftwidth = 4
 vim.opt.splitright = true
 vim.opt.expandtab = true
 
---------------------------------
--- disable copilot by default --
--- -----------------------------
+----------------------
+-- copilot settings --
+-- -------------------
 vim.g.copilot_enabled = false
