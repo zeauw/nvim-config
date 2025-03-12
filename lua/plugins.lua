@@ -25,14 +25,16 @@ require("lazy").setup({
     end
     },
 
+    -- snippets
+    "SirVer/ultisnips",
+
     -- auto completion
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/nvim-cmp",
-    {"L3MON4D3/LuaSnip",
-    version = "v2.*"},
+    "quangnguyen30192/cmp-nvim-ultisnips",
     
     {"nvim-tree/nvim-tree.lua",
     version = "*",
@@ -104,13 +106,6 @@ require("lazy").setup({
         highlight = { enable = true },
         })
     end},
-
-    {"iurimateus/luasnip-latex-snippets.nvim",
-    config = function()
-            require('luasnip-latex-snippets').setup({ use_treesitter = true, allow_on_markdown = true, })
-            require("luasnip").config.setup({ enable_autosnippets = true })
-        end,
-    },
 
     {'Vigemus/iron.nvim'},
 

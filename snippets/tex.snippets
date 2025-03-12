@@ -1,0 +1,25 @@
+snippet beg "begin{} / end{}" bA
+\begin{$1}
+    $0
+\end{$1}
+endsnippet
+
+snippet eq "eqution" bA
+\begin{eqution}
+    $0
+\end{eqution}
+
+snippet leq "eqution with label" bA
+\begin{eqution}
+    \label{eq:$0}
+    $1
+\end{eqution}
+
+snippet fig "figure" bA
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.8\textwidth]{$0}
+	\caption{$1}
+	\label{fig:$2}
+\end{figure}
+endsnippet
