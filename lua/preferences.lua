@@ -46,8 +46,3 @@ vim.opt.expandtab = true
 -- copilot settings --
 -- -------------------
 vim.g.copilot_enabled = false
-
--------------
--- snippet --
--------------
-vim.g.UltiSnipsSnippetDirectories = ("snippets")
