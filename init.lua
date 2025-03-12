@@ -1,6 +1,5 @@
 require('plugins') 
 require('cmp-conf')
-require('lsp')
 require('org-conf')
 require('bufferline-conf')
 require('iron-conf')
