@@ -111,16 +111,6 @@ require("lazy").setup({
             require("luasnip").config.setup({ enable_autosnippets = true })
         end,
     },
-        
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        build = "cd app && npm install",
-        init = function()
-            vim.g.mkdp_filetypes = { "markdown" }
-        end,
-        ft = { "markdown" },
-    },
 
     {'Vigemus/iron.nvim'},
 
