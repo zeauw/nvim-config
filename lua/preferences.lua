@@ -15,11 +15,16 @@ vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<CR>')
 vim.keymap.set('n', '<Leader>fp', ':Telescope projects<CR>')
 
 -- terminal
-vim.keymap.set('n', '<C-t>', ':vsp term://fish<CR>')
+vim.keymap.set('n', '<Leader>te', ':vsp term://fish<CR>')
 vim.keymap.set('n', '<Leader>sp', ':split term://fish<CR>')
 
 -- error
-vim.keymap.set('n', '<Leader>er', '<cmd>lua vim.diagnostic.open_float()<CR>', opts) -- expand error information 
+vim.keymap.set('n', '<Leader>er', '<cmd>lua vim.diagnostic.open_float()<CR>',
+               opts) -- expand error information
+
+-- formatter
+vim.keymap.set('n', '<Leader>fm', ':Format<CR>')
+vim.keymap.set('n', '<Leader>fw', ':FormatWrite<CR>')
 
 -------------------
 -- Terminal mode --
