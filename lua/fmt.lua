@@ -17,6 +17,7 @@ require("formatter").setup {
             require("formatter.filetypes.lua").luaformat
 
         },
+        python = {require("formatter.filetypes.python").autopep8},
         -- Use the special "*" filetype for defining formatter configurations on
         -- any filetype
         ["*"] = {
