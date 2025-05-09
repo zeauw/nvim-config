@@ -48,8 +48,8 @@ require("lazy").setup({
                 end
             }
         end
-    }, "mhartington/formatter.nvim", "EdenEast/nightfox.nvim",
-
+    }, "mhartington/formatter.nvim",
+    {'maxmx03/dracula.nvim', lazy = false, priority = 1000},
     "github/copilot.vim", {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.6',
