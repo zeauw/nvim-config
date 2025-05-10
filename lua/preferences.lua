@@ -17,8 +17,8 @@ vim.keymap.set('n', '<Leader>fs', ':Telescope lsp_document_symbols<CR>')
 vim.keymap.set('n', '<C-f>', ':Telescope current_buffer_fuzzy_find<CR>')
 
 -- terminal
-vim.keymap.set('n', '<Leader>te', ':vsp term://fish<CR>')
-vim.keymap.set('n', '<Leader>sp', ':split term://fish<CR>')
+vim.keymap.set('n', '<Leader>tv', ':vsp term://fish<CR>')
+vim.keymap.set('n', '<Leader>ts', ':split term://fish<CR>')
 
 -- error
 vim.keymap.set('n', '<Leader>er', '<cmd>lua vim.diagnostic.open_float()<CR>',
@@ -27,6 +27,22 @@ vim.keymap.set('n', '<Leader>er', '<cmd>lua vim.diagnostic.open_float()<CR>',
 -- formatter
 vim.keymap.set('n', '<Leader>fm', ':Format<CR>')
 vim.keymap.set('n', '<Leader>fw', ':FormatWrite<CR>')
+
+-- dap
+vim.keymap.set('n', '<F5>', function() require('dap').continue() end)
+vim.keymap.set('n', '<F10>', function() require('dap').step_over() end)
+vim.keymap.set('n', '<F11>', function() require('dap').step_into() end)
+vim.keymap.set('n', '<F12>', function() require('dap').step_out() end)
+vim.keymap.set('n', '<Leader>b',
+               function() require('dap').toggle_breakpoint() end)
+vim.keymap.set('n', '<Leader>B', function() require('dap').set_breakpoint() end)
+vim.keymap.set('n', '<Leader>lp', function()
+    require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))
+end)
+vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
+vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
+vim.keymap.set({'n', 'v'}, '<Leader>da',
+               function() require('dapui').toggle() end)
 
 -------------------
 -- Terminal mode --

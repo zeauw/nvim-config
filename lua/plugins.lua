@@ -29,9 +29,10 @@ require("lazy").setup({
         'akinsho/bufferline.nvim',
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons'
-    }, {
+    },
+    {
         'nvim-lualine/lualine.nvim',
-        dependencies = {'nvim-tree/nvim-web-devicons'},
+        dependencies = {'nvim-tree/nvim-web-devicons'}
     },
 
     {
@@ -155,5 +156,8 @@ require("lazy").setup({
                 desc = "Quickfix List (Trouble)"
             }
         }
+    }, "mfussenegger/nvim-dap", {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}
     }
 })

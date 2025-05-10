@@ -1,6 +1,7 @@
 require('plugins')
-require('cmp-conf')
 require('org-conf')
+require('cmp-conf')
+require('lsp-dap-conf')
 require('bufferline-conf')
 require('lualine-conf')
 require('iron-conf')
