@@ -32,7 +32,6 @@ require("lazy").setup({
     }, {
         'nvim-lualine/lualine.nvim',
         dependencies = {'nvim-tree/nvim-web-devicons'},
-        config = function() require('lualine').setup() end
     },
 
     {
@@ -49,7 +48,7 @@ require("lazy").setup({
             }
         end
     }, "mhartington/formatter.nvim",
-    {'maxmx03/dracula.nvim', lazy = false, priority = 1000},
+    {'shaunsingh/nord.nvim', lazy = false, priority = 1000},
     "github/copilot.vim", {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.6',
