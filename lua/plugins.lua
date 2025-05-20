@@ -41,12 +41,7 @@ require("lazy").setup({
     }, {
         "williamboman/mason-lspconfig.nvim",
         config = function()
-            require("mason-lspconfig").setup()
-            require("mason-lspconfig").setup_handlers {
-                function(server_name) -- default handler (optional)
-                    require("lspconfig")[server_name].setup {}
-                end
-            }
+            require("mason-lspconfig").setup({automatic_enable = true})
         end
     }, "mhartington/formatter.nvim",
     {'shaunsingh/nord.nvim', lazy = false, priority = 1000},
