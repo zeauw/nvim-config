@@ -1,6 +1,12 @@
 -----------------
 -- Normal mode --
 -----------------
+-- Windows navigation
+vim.keymap.set('n', '<C-Left>', '<C-w>h')
+vim.keymap.set('n', '<C-Down>', '<C-w>j')
+vim.keymap.set('n', '<C-Up>', '<C-w>k')
+vim.keymap.set('n', '<C-Right>', '<C-w>l')
+
 -- Nvim tree
 vim.keymap.set('n', '<Leader>ls', ':NvimTreeToggle<CR>', opts)
 
