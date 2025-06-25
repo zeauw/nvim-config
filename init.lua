@@ -1,7 +1,6 @@
 require('plugins')
 require('org-conf')
 require('dap-conf')
-require('lint-conf')
 require('cmp-conf')
 require('bufferline-conf')
 require('lualine-conf')
