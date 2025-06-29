@@ -50,6 +50,9 @@ vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
 vim.keymap.set({'n', 'v'}, '<Leader>da',
                function() require('dapui').toggle() end)
 
+-- rename
+vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename)
+
 -------------------
 -- Terminal mode --
 -------------------
