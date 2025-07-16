@@ -26,8 +26,8 @@ vim.keymap.set('n', '<Leader>se', ':Telescope current_buffer_fuzzy_find<CR>')
 vim.keymap.set('n', '<Leader>tv', ':vsp term://fish<CR>')
 vim.keymap.set('n', '<Leader>ts', ':split term://fish<CR>')
 
--- error
-vim.keymap.set('n', '<Leader>er', '<cmd>lua vim.diagnostic.open_float()<CR>',
+-- diagnostic
+vim.keymap.set('n', '<Leader>sd', '<cmd>lua vim.diagnostic.open_float()<CR>',
                opts) -- expand error information
 
 -- formatter
