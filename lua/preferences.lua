@@ -18,7 +18,8 @@ vim.keymap.set('n', '<Leader>gi', ':Neogit <CR>', opts)
 
 -- telescope
 vim.keymap.set('n', '<Leader>ff', ':Telescope find_files<CR>')
-vim.keymap.set('n', '<Leader>fp', ':Telescope projects<CR>')
+vim.keymap.set('n', '<Leader>fp', ':Telescope project<CR>')
+vim.keymap.set('n', '<Leader>fg', ':Telescope live_grep<CR>')
 vim.keymap.set('n', '<Leader>fs', ':Telescope lsp_document_symbols<CR>')
 vim.keymap.set('n', '<Leader>se', ':Telescope current_buffer_fuzzy_find<CR>')
 

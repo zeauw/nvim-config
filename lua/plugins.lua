@@ -13,12 +13,8 @@ require("lazy").setup({
     {
         "lewis6991/gitsigns.nvim",
         config = function() require('lualine').setup() end
-    }, "neovim/nvim-lspconfig", {
-        "ahmedkhalf/project.nvim",
-        config = function() require("project_nvim").setup {} end
-    }, -- auto completion
-    "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path",
-    "hrsh7th/cmp-cmdline", "hrsh7th/nvim-cmp",
+    }, "neovim/nvim-lspconfig", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline", "hrsh7th/nvim-cmp", -- auto completion
     {"L3MON4D3/LuaSnip", version = "v2.*"}, {
         "nvim-tree/nvim-tree.lua",
         version = "*",
@@ -43,14 +39,16 @@ require("lazy").setup({
         config = function()
             require("mason-lspconfig").setup({automatic_enable = true})
         end
-    }, "mhartington/formatter.nvim",
-    {'shaunsingh/nord.nvim', lazy = false, priority = 1000},
+    }, "mhartington/formatter.nvim", {
+        'nvim-telescope/telescope-project.nvim',
+        dependencies = {'nvim-telescope/telescope.nvim'}
+    }, {'shaunsingh/nord.nvim', lazy = false, priority = 1000},
     "github/copilot.vim", {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.6',
+        branch = '0.1.x',
         dependencies = {'nvim-lua/plenary.nvim'},
         config = function()
-            require('telescope').load_extension('projects')
+            require('telescope').load_extension('project')
         end
     }, {'nvim-orgmode/orgmode', event = 'VeryLazy', ft = {'org'}},
 
