@@ -49,7 +49,13 @@ require("lazy").setup({
         dependencies = {'nvim-lua/plenary.nvim'},
         config = function()
             require('telescope').load_extension('project')
+            require("telescope").load_extension('file_browser')
         end
+    }, {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = {
+            "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"
+        }
     }, {'nvim-orgmode/orgmode', event = 'VeryLazy', ft = {'org'}},
 
     "dhruvasagar/vim-table-mode", {
