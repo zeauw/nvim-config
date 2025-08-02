@@ -99,7 +99,7 @@ require("lazy").setup({
         ft = {'org'}
     },
 
-    "dhruvasagar/vim-table-mode", 
+    "dhruvasagar/vim-table-mode",
 
     {
         "NeogitOrg/neogit",
