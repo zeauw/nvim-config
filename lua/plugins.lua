@@ -13,19 +13,35 @@ require("lazy").setup({
     {
         "lewis6991/gitsigns.nvim",
         config = function() require('lualine').setup() end
-    }, "neovim/nvim-lspconfig", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline", "hrsh7th/nvim-cmp", -- auto completion
-    {"L3MON4D3/LuaSnip", version = "v2.*"}, {
+    },
+
+    "neovim/nvim-lspconfig",
+
+    "hrsh7th/cmp-nvim-lsp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
+    "hrsh7th/cmp-cmdline",
+    "hrsh7th/nvim-cmp", -- auto completion
+
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*"
+    },
+
+    {
         "nvim-tree/nvim-tree.lua",
         version = "*",
         lazy = false,
         dependencies = {"nvim-tree/nvim-web-devicons"},
         config = function() require("nvim-tree").setup {} end
-    }, {
+    },
+
+    {
         'akinsho/bufferline.nvim',
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons'
     },
+
     {
         'nvim-lualine/lualine.nvim',
         dependencies = {'nvim-tree/nvim-web-devicons'}
@@ -34,16 +50,31 @@ require("lazy").setup({
     {
         "williamboman/mason.nvim",
         config = function() require("mason").setup() end
-    }, {
+    },
+
+    {
         "williamboman/mason-lspconfig.nvim",
         config = function()
             require("mason-lspconfig").setup({automatic_enable = true})
         end
-    }, "mhartington/formatter.nvim", {
+    },
+
+    "mhartington/formatter.nvim",
+
+    {
         'nvim-telescope/telescope-project.nvim',
         dependencies = {'nvim-telescope/telescope.nvim'}
-    }, {'shaunsingh/nord.nvim', lazy = false, priority = 1000},
-    "github/copilot.vim", {
+    },
+
+    {
+        'shaunsingh/nord.nvim',
+        lazy = false,
+        priority = 1000
+    },
+
+    "github/copilot.vim",
+
+    {
         'nvim-telescope/telescope.nvim',
         branch = '0.1.x',
         dependencies = {'nvim-lua/plenary.nvim'},
@@ -51,14 +82,26 @@ require("lazy").setup({
             require('telescope').load_extension('project')
             require("telescope").load_extension('file_browser')
         end
-    }, {
+    },
+
+
+    {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = {
-            "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"
+            "nvim-telescope/telescope.nvim",
+            "nvim-lua/plenary.nvim"
         }
-    }, {'nvim-orgmode/orgmode', event = 'VeryLazy', ft = {'org'}},
+    },
 
-    "dhruvasagar/vim-table-mode", {
+    {
+        'nvim-orgmode/orgmode',
+        event = 'VeryLazy',
+        ft = {'org'}
+    },
+
+    "dhruvasagar/vim-table-mode", 
+
+    {
         "NeogitOrg/neogit",
         dependencies = {
             "nvim-lua/plenary.nvim", -- required
@@ -66,7 +109,9 @@ require("lazy").setup({
             "nvim-telescope/telescope.nvim" -- optional
         },
         config = true
-    }, {
+    },
+
+    {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
@@ -77,7 +122,9 @@ require("lazy").setup({
                 highlight = {enable = true}
             })
         end
-    }, {
+    },
+
+    {
         "iurimateus/luasnip-latex-snippets.nvim",
         config = function()
             require('luasnip-latex-snippets').setup({
@@ -86,19 +133,18 @@ require("lazy").setup({
             })
             require("luasnip").config.setup({enable_autosnippets = true})
         end
-    }, {'Vigemus/iron.nvim'},
+    },
+
+    'Vigemus/iron.nvim',
 
     {
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
-    }, {
+    },
+
+    {
         "folke/which-key.nvim",
         event = "VeryLazy",
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        },
         keys = {
             {
                 "<leader>?",
@@ -108,7 +154,9 @@ require("lazy").setup({
                 desc = "Buffer Local Keymaps (which-key)"
             }
         }
-    }, {
+    },
+
+    {
         "CopilotC-Nvim/CopilotChat.nvim",
         branch = "main",
         dependencies = {
@@ -122,7 +170,9 @@ require("lazy").setup({
             window = {layout = 'vertical'}
         }
         -- See Commands section for default commands if you want to lazy load on them
-    }, {
+    },
+
+    {
         "folke/trouble.nvim",
         opts = {}, -- for default options, refer to the configuration section for custom setup.
         cmd = "Trouble",
@@ -153,16 +203,28 @@ require("lazy").setup({
                 desc = "Quickfix List (Trouble)"
             }
         }
-    }, "mfussenegger/nvim-dap", {
+    },
+
+    "mfussenegger/nvim-dap",
+    {
         "rcarriga/nvim-dap-ui",
-        dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}
-    }, {
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio"
+        }
+    },
+
+    {
         "iamcco/markdown-preview.nvim",
         cmd = {
-            "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop"
+            "MarkdownPreviewToggle",
+            "MarkdownPreview",
+            "MarkdownPreviewStop"
         },
         build = "cd app && yarn install",
-        init = function() vim.g.mkdp_filetypes = {"markdown"} end,
+        init = function()
+            vim.g.mkdp_filetypes = {"markdown"}
+        end,
         ft = {"markdown"}
     }
 
