@@ -226,6 +226,13 @@ require("lazy").setup({
             vim.g.mkdp_filetypes = {"markdown"}
         end,
         ft = {"markdown"}
+    },
+
+    {
+        "keaising/im-select.nvim",
+        config = function()
+            require("im_select").setup({})
+        end,
     }
 
 })
