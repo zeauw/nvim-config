@@ -233,6 +233,8 @@ require("lazy").setup({
         config = function()
             require("im_select").setup({})
         end,
-    }
+    },
+
+    "sukima/vim-tiddlywiki"
 
 })
