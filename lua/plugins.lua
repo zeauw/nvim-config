@@ -125,11 +125,12 @@ require("lazy").setup({
     },
 
     {
-        "iurimateus/luasnip-latex-snippets.nvim",
+        "zeauw/luasnip-latex-snippets.nvim",
         config = function()
             require('luasnip-latex-snippets').setup({
                 use_treesitter = true,
-                allow_on_markdown = true
+                allow_on_markdown = true,
+                allow_on_tiddlywiki = true
             })
             require("luasnip").config.setup({enable_autosnippets = true})
         end
