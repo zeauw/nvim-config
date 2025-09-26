@@ -117,7 +117,7 @@ require("lazy").setup({
         config = function()
             local configs = require("nvim-treesitter.configs")
             configs.setup({
-                ensure_installed = 'all',
+                auto_install = true,
                 ignore_install = {'org'},
                 highlight = {enable = true}
             })
@@ -125,12 +125,11 @@ require("lazy").setup({
     },
 
     {
-        "zeauw/luasnip-latex-snippets.nvim",
+        "iurimateus/luasnip-latex-snippets.nvim",
         config = function()
             require('luasnip-latex-snippets').setup({
                 use_treesitter = true,
                 allow_on_markdown = true,
-                allow_on_tiddlywiki = true
             })
             require("luasnip").config.setup({enable_autosnippets = true})
         end
@@ -216,26 +215,33 @@ require("lazy").setup({
     },
 
     {
-        "iamcco/markdown-preview.nvim",
-        cmd = {
-            "MarkdownPreviewToggle",
-            "MarkdownPreview",
-            "MarkdownPreviewStop"
-        },
-        build = "cd app && yarn install",
-        init = function()
-            vim.g.mkdp_filetypes = {"markdown"}
-        end,
-        ft = {"markdown"}
-    },
-
-    {
         "keaising/im-select.nvim",
         config = function()
             require("im_select").setup({})
         end,
     },
 
-    "sukima/vim-tiddlywiki"
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        ft = { 'markdown' },
+    },
+
+    {
+        "HakonHarnes/img-clip.nvim",
+        event = "VeryLazy",
+        opts = {},
+        keys = {
+            { "<leader>pi", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+        },
+    },
+
+    {
+        "zk-org/zk-nvim",
+        config = function()
+            require("zk").setup({
+                picker = "telescope"
+            })
+        end
+    }
 
 })
