@@ -233,24 +233,6 @@ require("lazy").setup({
         keys = {
             { "<leader>pi", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
         },
-    },
-
-    {
-        "3rd/image.nvim",
-        build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
-        opts = {
-            backend = "sixel",
-            processor = "magick_cli",
-        }
-    },
-
-    {
-        "zk-org/zk-nvim",
-        config = function()
-            require("zk").setup({
-                picker = "telescope"
-            })
-        end
     }
 
 })
