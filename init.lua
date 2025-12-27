@@ -1,5 +1,4 @@
 require('plugins')
-require('org-conf')
 require('dap-conf')
 require('cmp-conf')
 require('bufferline-conf')

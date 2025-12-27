@@ -93,12 +93,6 @@ require("lazy").setup({
         }
     },
 
-    {
-        'nvim-orgmode/orgmode',
-        event = 'VeryLazy',
-        ft = {'org'}
-    },
-
     "dhruvasagar/vim-table-mode",
 
     {
@@ -113,12 +107,11 @@ require("lazy").setup({
 
     {
         "nvim-treesitter/nvim-treesitter",
+	lazy = false,
         build = ":TSUpdate",
         config = function()
-            local configs = require("nvim-treesitter.configs")
-            configs.setup({
+            require'nvim-treesitter'.setup({
                 auto_install = true,
-                ignore_install = {'org'},
                 highlight = {enable = true}
             })
         end
@@ -233,6 +226,16 @@ require("lazy").setup({
         keys = {
             { "<leader>pi", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
         },
-    }
+    },
+
+
+    {
+        "3rd/image.nvim",
+        build = false, -- so that it doesn't build the rock https://github.com/3rd/image.nvim/issues/91#issuecomment-2453430239
+        opts = {
+            backend = "kitty",
+            processor = "magick_cli",
+        }
+    },
 
 })
